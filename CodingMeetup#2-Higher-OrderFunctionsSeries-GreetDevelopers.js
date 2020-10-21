@@ -5,11 +5,10 @@ const list1 = [
 ];
 
 function greetDevelopers(list) {
-  return list.reduce((acc, curV) => {
-    curV.greeting = `Hi ${curV.firstName}, what do you like the most about ${curV.language}?`;
-    acc.push(curV);
-    return acc;
-  }, []);
+  return list.map((obj) => {
+    obj.greeting = `Hi ${obj.firstName}, what do you like the most about ${obj.language}?`;
+    return obj;
+  });
 }
 
 console.log(greetDevelopers(list1));
